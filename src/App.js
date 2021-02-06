@@ -1,29 +1,17 @@
 /*global google*/
 import logo from './logo.svg';
 import './App.css';
-import styled from 'styled-components';
-import {css} from "@emotion/react";
-import SimpleMap from "./component/SimpleMap.js";
-import { Map } from 'google-maps-react';
-import { MapContainer } from './component/MapContainer';
-
-const Container = styled.div`
-  height: 200vh;
-  position : absolute ;
-  display : flex;
-  width : 100vw;
-`
+import { Route, Switch } from "react-router-dom";
+import NewSending from './component/NewSending';
+import RealApp from './RealApp';
 
 function App() {
   return (
    <div>
-     
-      <Container>
-        <MapContainer/>
-      </Container>
-      <Container>
-          <SimpleMap/>
-      </Container>
+     <Switch>
+      <Route exact path="/" component={RealApp} />
+       <Route exact path="/send" component = {NewSending}/>
+      </Switch>
     </div>
       
   
