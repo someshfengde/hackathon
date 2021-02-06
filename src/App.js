@@ -1,3 +1,4 @@
+/*global google*/
 import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
@@ -5,6 +6,7 @@ import {css} from "@emotion/react";
 import SimpleMap from "./component/SimpleMap.js";
 import { Map } from 'google-maps-react';
 import { MapContainer } from './component/MapContainer';
+
 const Container = styled.div`
   height: 200vh;
   position : absolute ;
@@ -15,13 +17,13 @@ const Container = styled.div`
 function App() {
   return (
    <div>
-     <Container>
+     
+      <Container>
+        <MapContainer/>
+      </Container>
+      <Container>
           <SimpleMap/>
       </Container>
-      {/* <Container>
-        <MapContainer/>
-      </Container> */}
-      
     </div>
       
   
